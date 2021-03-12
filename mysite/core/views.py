@@ -51,15 +51,6 @@ def delete_book(request, pk):
         book.delete()
     return redirect('book_list')
 
-# Defining function for running external python script
-
-
-def external(request):
-    video = request.POST.get('param')
-    out = run([sys.executable, 'M:\TEPROJECT\CamScannerClone\Scan4U\Frame_Extraction.py'],
-              shell=False, stout=PIPE)
-    print(out)
-
 
 class BookListView(ListView):
     model = Book
