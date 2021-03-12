@@ -142,3 +142,5 @@ MEDIA_URL = '/media/'
 django_heroku.settings(locals())
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+
+django_heroku.settings(locals())
